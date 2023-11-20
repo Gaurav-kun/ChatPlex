@@ -1,0 +1,168 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style4.css">
+  <script src="https://kit.fontawesome.com/c99caa8da7.js" crossorigin="anonymous"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: solid #49c59c;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 10px;
+  border-width: 0 0 2px;
+  background: rgba(255, 255, 255, 0.459);
+  box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
+  outline: 0;
+}
+input[type=text]:focus, select:focus, textarea:focus {
+  border-color: teal;
+}
+
+input[type=submit] {
+  background-color:teal ;
+  color: white;
+padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: darkcyan;
+}
+
+input[type=reset] {
+  background-color:green ;
+  color: rgb(255, 243, 243);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+} 
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color:gainsboro; padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+</style>
+<link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+<title> Contact And Services </title>
+</head>
+<body background="3.png" class="body">
+  <header id="header">
+    
+    <div class="navbar">
+    <div class="ti">
+        <font color="white" face="monospace">ChatPlex</font>
+    </div>
+    <a href="contact.html"><font color="cyan" face="Montserrat", sans-serif>CONTACT US</font></a>
+    <a href="chat.html"><font face="Montserrat", sans-serif>CHAT</font></a>
+    <a href="index.html" class="main"><font face="Montserrat", sans-serif>HOME</font></a>  
+</div>
+    </header>
+<div class="cta">
+  <div class="centered">
+    <h1 color="aliceblue">Contact Us</h1>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="contact us.jpg" style="width:100%; border-radius: 10px;-webkit-box-reflect: below 4px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));">
+    </div>
+    <div class="column">
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="usa">India</option>
+        </select>
+Type: <INPUT TYPE="RADIO" NAME="Type" value="Feedback" checked required> Feedback
+ &nbsp;&nbsp; <INPUT TYPE="RADIO" NAME="Type" value="Complaint" >Complaint<p>
+
+        <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px" required></textarea>
+        <input type="submit" value="Submit" class="sub">
+           <input type="reset" value="Reset" class="reset">
+      </form>
+    </div>
+  </div>
+</div>
+<button class="img_top" id="myBtn" href="#header"><a href="#header">Top</a></button>
+<script>
+  let mybutton = document.getElementById("myBtn");
+  let navbar = document.getElementById("navbar");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    navbar.style.backgroundImage = "linear-gradient(to right, rgba(4, 37, 145, 0.5),rgba(4, 37, 145, 0.5))";
+  } else {
+    mybutton.style.display = "none";
+    navbar.style.backgroundImage = "none";
+  }
+}
+</script>
+<div class="footer">
+  <div class="col-1">
+  <h3> USEFUL LINKS</h3><hr color="teal" size=5%><br>
+  <a href="index.html"> HOME</a>
+  <a href="chat.html"> CHAT</a>
+  <a href="#"><font color="darkcyan"> CONTACT US</font></a>
+  </div>
+  <div class="col-2">
+   <h3>NEWSLETTER</h3><hr color="teal" size=5% width="50%"><br>
+   <form class="fs">
+     <input type="email" placeholder="Your Email Address" required>
+     <br>
+     <button type="submit" class="but"> SUBSCRIBE NOW</button>
+   </form>
+  </div>
+  <div class="col-3">
+   <H3> CONTACT INFORMATION</H3><hr color="teal" size=5% width="100%">
+   <div class="social-icons"> 
+     <i class="fa-brands fa-facebook"></i>
+     <i class="fa-brands fa-twitter"></i>
+     <i class="fa-brands fa-instagram"></i>
+     <i class="fa-brands fa-telegram"></i>
+   </div>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.346736061555!2d91.76188877455547!3d26.18539669096956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a598f0fd41055%3A0x6fafdf03f2b8fad3!2sMaharishi%20Vidya%20Mandir%20School!5e0!3m2!1sen!2sin!4v1699703826837!5m2!1sen!2sin" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+   
+  </div>
+ 
+ </div>
+</body>
+</html>

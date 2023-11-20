@@ -1,0 +1,183 @@
+body {margin:0; background-image: linear-gradient(to right, blue, purple);}
+  .navbar {
+    overflow: hidden;
+      background-image: linear-gradient(to right, rgba(4, 37, 145, 0.5),rgba(4, 37, 145, 0.5));
+    top: 0;
+    width: 100%;
+  }
+  .ti{
+      float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .navbar a {
+    float: right;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar a:hover {
+  
+    color: cyan;
+    text-decoration: cyan;
+  }
+  .cta{
+    height: 75%;
+    background: linear-gradient(rgba(23, 35, 56, 0.699), rgba(29, 44, 70, 0.616)), url("forest2.jpg") fixed center center;
+  }
+  .centered {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#E0E0E0;
+  font-variant: small-caps ;
+  }
+  .footer {
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background-color: #333;
+    color: #efefef;
+    display: flex;
+
+  }
+.footer div {
+  text-align: center;
+  }
+  .col-2 {
+  flex-grow: 2; 
+    }
+  .footer div h3 {
+      font-weight: 300;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      font-family: monospace;
+  }
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: large;
+}
+form input {
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+
+}
+form button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons i {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+#chat-container {
+
+  width: 100%;
+  height: 90%;
+
+  padding: 20px;
+  
+}
+
+#message-container {
+  padding: 20px;
+  border-radius: 10px;
+  height: 80%;
+  width: 100%;
+  overflow-y: scroll;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5));
+}
+
+#message-input {
+  width: 90%;
+  padding: 10px;
+  height: 10%;
+  font-size: 17;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 3px solid rgb(58, 7, 105);
+  
+}
+#message-input:focus{
+  border: none;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+input[type="file"]{
+  display: none;
+}
+label{
+
+  display: inline-block;
+  color: white;
+  background-color: blueviolet;
+  text-align: center;
+  padding: 20 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+label:hover{
+  background-color: purple;
+}
+#group{
+  border-radius: 10px;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(60, 0, 139);
+}
+.send{
+  background-color: darkviolet;
+  border-radius: 5px;
+  border: none;
+  height: 10%;
+  width: 5%;
+}
+.send:hover{
+  background-color: blueviolet;
+}
+.groupname{
+  float: left;
+  display: block;
+  padding: 8 15px;
+}
+#icons{
+  float: right;
+  display: block;
+  padding: 12 20px;
+  font-size: 25px;
+}

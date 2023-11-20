@@ -1,0 +1,120 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://kit.fontawesome.com/c99caa8da7.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+<style>
+* {
+  box-sizing: border-box;
+}
+</style>
+
+<title> ChatMode </title>
+</head>
+<body bgcolor="gainsboro" class="body">
+  <header>
+    
+    <div class="navbar">
+    <div class="ti">
+        <font color="white" face="monospace">ChatPlex</font>
+    </div>
+    <a href="contact.html"><font face="Montserrat", sans-serif>CONTACT US</font></a>
+    <a href="species.html"><font color="cyan" face="Montserrat", sans-serif>CHAT</font></a>
+    <a href="index.html" class="main"><font face="Montserrat", sans-serif>HOME</font></a>  
+</div>
+    </header>
+    <div id="chat-container">
+      <div id="group">
+        <div class="groupname"><font face="system-ui" color="white" size="5">Friends Forever Conversation</font></div>
+        <a href="tel:+91 7002501155"><i id="icons" class="fa fa-phone" style="color: white;"></i></a>
+        <a href="https://meet.google.com/jeb-hgnx-qxb"><i id="icons" class="fa fa-video-camera" style="color: white;"></i></a>
+      </div>
+      <div id="message-container"></div><br><input type="file" id="file-input"  accept="image/*" capture="camera">
+      <label for="file-input"><i class="fa fa-camera" style="color: aliceblue;"></i></label>
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button class="send" onclick="sendMessage()">	<i class="fa fa-send" style="font-size:17px;color:white;"></i></button>
+      
+      
+  </div>
+
+
+    <script>
+      var storedName = localStorage.getItem('userName');
+      if (!storedName) {
+   var name = window.prompt("What's your name?");
+   localStorage.setItem('userName', name);}
+   else{
+     document.getElementById("n").innerHTML = storedName;
+   }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const messageContainer = document.getElementById("message-container");
+    const messageInput = document.getElementById("message-input");
+    const fileInput = document.getElementById("file-input");
+
+    function sendMessage() {
+        const messageText = messageInput.value;
+        const file = fileInput.files[0];
+
+        if (messageText.trim() !== "" || file) {
+            const messageElement = document.createElement("div");
+            messageElement.style.display= "inline-block";
+            messageElement.style.minHeight= "7%";
+            messageElement.style.maxHeight= "100%";
+            messageElement.style.maxWidth= "50%";
+            messageElement.style.minWidth= "10%";
+            messageElement.style.backgroundColor= "plum";
+            messageElement.style.borderRadius= "10px";
+            messageElement.style.color="white";
+            messageElement.className = "message";
+            if (messageText.trim() !== "") {
+                messageElement.textContent = messageText;
+            } else if (file) {
+                const fileType = file.type.split("/")[0];
+                if (fileType === "image") {
+                    const imageElement = document.createElement("img");
+                    imageElement.src = URL.createObjectURL(file);
+                    imageElement.style.width = "100%";
+              imageElement.style.height = "100%";
+              imageElement.style.borderRadius = "5px";
+              imageElement.style.border = "2px solid violet";
+                    messageElement.appendChild(imageElement);
+                } else{
+                  messageElement.textContent = `File: ${file.name}`;
+                }
+            }
+
+            messageContainer.appendChild(messageElement);
+            messageContainer.appendChild(document.createElement("br"));
+            messageContainer.appendChild(document.createElement("br"));
+            messageInput.value = "";
+            fileInput.value = ""; // Clear the file input
+        }
+    }
+
+    window.sendMessage = sendMessage;
+});
+  
+  </script>
+  <style>
+    .message{
+      max-width: 10%;
+    }
+  </style>
+   </body>
+</html>
